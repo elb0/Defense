@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Longitudinal predictors of mortality inequalities in Aotearoa New Zealand</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Elizabeth (Liza) Lillian Bolton" />
+    <meta name="date" content="2023-10-12" />
+    <script src="libs/header-attrs-2.23/header-attrs.js"></script>
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i>","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i>","error":"Press Ctrl+C to Copy"})</script>
+    <link href="libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+    <script src="libs/freezeframe-5.0.2/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe-0.0.1/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <link rel="stylesheet" href="slides_lb.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Longitudinal predictors of mortality inequalities in Aotearoa New Zealand
+]
+.subtitle[
+## Supervised by Barry Milne with Thomas Lumley, Chris Wild and Alan Lee
+]
+.author[
+### Elizabeth (Liza) Lillian Bolton
+]
+.date[
+### 2023-10-12
+]
+
+---
+
+class: inverse
+
+
+
+## A quick preface 📝
+This talk is a sample teaching presentation.
+
+The task: *A short teaching presentation (5-10 mins) explaining some topic of my choice suitable for a second or third year undergraduate Data Science course.*
+
+I have geared this talk to a third year class with the following assumptions:
+- this topic would be fairly early in the course (Week 1 or 2),
+- students have had exposure to programming in R &amp; RStudio and using the `tidyverse`, and
+- in class we have already discussed some ideas around professional practice, communication and collaboration.
+
+.small[*This presentation is based on content I developed and taught in STA303: Methods of Data Analysis II at the University of Toronto.*]
+
+---
+class: inverse
+
+## Learning outcomes
+
+#### Specific
+- Describe the features of good reproducible examples and when and why we need them.
+- Create a basic reprex in R.
+
+#### Course level
+
+In a course with a small number of overarching learning outcomes, this topic would likely come under something of this kind:
+
+- Understand and implement professional collaboration and communication practices appropriate for data scientists.
+
+---
+class: center, middle, inverse
+
+# 🧢 Please put your student hats  on now, I am going to interact with you as if you are students in a Zoom class.
+
+# *Let's begin!*
+
+# 🔗 [link.lizabolton.com/reprex](link.lizabolton.com/reprex.html)
+
+---
+background-image: url(https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/e4a11b1f-f235-461f-ab73-ce6128c59e49_rw_1920.png?h=a34a4173c717bfbc600a8682d419288e)
+background-size: contain
+
+# No data scientist
+# is an island
+
+.tiny[.right-column[Image description: A person in a cape that reads “code hero” who looks like they are flying through the air while typing on a computer while saying “I’m doing a think all on my own!” The coder’s arms and legs have ropes attached to two hot air balloons lifting them up, with labels on the balloons including “teachers”, “bloggers”, “friends”, “developers”. Below the code hero, several people carry a trampoline with labels “support” and “community” that will catch them if they fall. Artist: &lt;a href=https://allisonhorst.com/everything-else&gt;Allison Horst&lt;/a&gt;]]
+
+&lt;!---We've talked about the importance of communication as statisticians and data scientists, and we've also looked at a popular collaboration tools through Git &amp; GitHub. In the---&gt;
+
+---
+background-image: url("https://media.tenor.com/WTbXryP5r98AAAAC/thor-loki.gif")
+background-position: center
+background-size: contain
+background-color: black
+
+.small[.white[.footnote[Image description: GIF from the movie Thor: Ragnarok. Thor is yelling "Get help" at guards while supporting Loki and then flings Loki at the guards yelling "Help him".]]]
+
+---
+## What is a {repr}oducible {ex}ample?
+
+--
+**reprex** (noun) An example that someone else can reproduce.
+&lt;br&gt;
+
+--
+&lt;br&gt;
+Specifically, it is a **minimal example** needed for someone helping you to reproduce an error or other behaviour you would like them to recreate on their own machine.*
+
+.footnote[*This is especially helpful with the rise of online and hybrid work!] 
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+Additionally, sometimes when we say "reprex" we mean `reprex` (the package) or `reprex::reprex()` (a function within the package)
+
+[reprex.tidyverse.org](https://reprex.tidyverse.org/)
+
+
+---
+## Why should you care about creating reproducible examples?
+
+* Useful **professional skill** for those working with R and other programming languages in further study and future employment. 
+  - These concepts transferable to programming in any language. Learning how to ask for help is an evergreen skill.
+  - Useful for: 
+      * Asking a question on [community.rstudio.com](https://community.rstudio.com/) or [stackoverflow.com](https://stackoverflow.com/).
+      * Report a bug on [github.com](https://github.com/).
+      * Collaborate on Slack, Discord or in email.
+
+* Useful NOW to help *us* help **YOU** on Ed Discussion.
+
+* The process of preparing a reprex forces you to think about your code in a specific way that can help you spot the problem without actually having to ask anyone else.*
+
+
+.footnote[*This literally happened to me about 2 hours before preparing this slide for the first time!]
+
+---
+## The philosophy of a good reprex
+
+.large[
+* Reprex code must **run** — no faking it, make sure you can run it and that it demonstrates the issue
+* Others shouldn't *have* to run it — someone familiar with R might be able to read the code and output and immediately understand what is going on
+* Should be easy for others to copy + paste + run
+]
+
+.footnote[Source: RStudio. *Reprex dos and don'ts*. https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html#package-philosophy]
+
+--
+
+.purple[.center[.large[**Must run. Doesn't have to be run. Easy to run.**]]]
+
+
+---
+## Data dos and don'ts
+
+**Use the simplest dataset possible**, almost NEVER your actual data. `iris` and `mtcars` are classics.
+- This is a great challenge to help you check if the issue is with your code or your data setup.
+
+- Furthermore, can your *data* even be shared? 
+      * This may have **privacy/commercial sensitivity** implications.
+      * It may just be *inconvenient* for the person/people helping you to have a large dataset.
+
+&lt;br&gt;
+.large[📖 For more dos and don'ts, read this RStudio article:  https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html]
+
+---
+class: middle, center
+
+# Demo: To RStudio!
+
+---
+## Demo code
+
+.panelset[
+
+.panel[.panel-name[Download Rmd]
+
+You can run this code to download the task to your current working directory. Make sure you have the right .Rproj open.
+
+
+```r
+download.file(
+  "https://raw.githubusercontent.com/lizabolton/2023-uoa-job-talk/main/reprex_task.Rmd", 
+              destfile = "reprex_task.Rmd")
+```
+]
+
+
+.panel[.panel-name[Code]
+
+
+```r
+# Load dpylr without messages
+suppressPackageStartupMessages(library(dplyr))
+
+starwars |&gt; 
+  select(where(is.numeric)) |&gt; 
+  mutate(is_human = species == "human")
+```
+
+]
+
+.panel[.panel-name[reprex]
+
+.small[
+
+``` r
+# Load dpylr without messages
+suppressPackageStartupMessages(library(dplyr))
+
+starwars |&gt; 
+  select(where(is.numeric)) |&gt; 
+  mutate(is_human = species == "human")
+#&gt; Error in `mutate()`:
+#&gt; ℹ In argument: `is_human = species == "human"`.
+#&gt; Caused by error:
+#&gt; ! object 'species' not found
+#&gt; Backtrace:
+#&gt;      ▆
+#&gt;   1. ├─dplyr::mutate(...)
+#&gt;   2. ├─dplyr:::mutate.data.frame(...)
+#&gt;   3. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)
+#&gt;   4. │   ├─base::withCallingHandlers(...)
+#&gt;   5. │   └─dplyr:::mutate_col(dots[[i]], data, mask, new_columns)
+#&gt;   6. │     └─mask$eval_all_mutate(quo)
+#&gt;   7. │       └─dplyr (local) eval()
+#&gt;   8. └─base::.handleSimpleError(...)
+#&gt;   9.   └─dplyr (local) h(simpleError(msg, call))
+#&gt;  10.     └─rlang::abort(message, class = error_class, parent = parent, call = error_call)
+```
+
+&lt;sup&gt;Created on 2023-07-18 with [reprex v2.0.2](https://reprex.tidyverse.org)&lt;/sup&gt;
+
+]
+]
+
+]
+
+---
+
+## Homework tasks
+
+
+.panelset[
+.panel[.panel-name[1 Watch Jenny Bryan's video]
+
+[Jenny Bryan](https://jennybryan.org/about/) is a bit of a hero of mine, and this was even BEFORE I knew she was one of the developers of the `reprex` package.
+
+I think the whole video is excellent, but at minimum, please watch the following time intervals:
+
+1. 0:00 - 7:20 (background and initial demo) &lt;br&gt;
+2. 14:08 - 29:48 (philosophy and examples)
+
+.highlight[The video and slides are on this page: https://reprex.tidyverse.org/articles/articles/learn-reprex.html]
+
+]
+.panel[.panel-name[2 Post on Ed Discussion]
+
+There is a Thread on Ed Discussion called **reprex practice**. Go through the steps I demonstrated today on your own and .question[post the result as a comment].
+
+.question[Identify and explain what is causing the error]
+
+📅 .highlight[Complete this by 5 PM Friday to earn the point top-up for this week's tasks.]
+]
+]
+
+---
+class: inverse, middle, center
+
+# Thank you!
+
+# &lt;a href = "https://www.linkedin.com/in/lizabolton/"&gt;&lt;i class="fa-brands fa-linkedin"&gt;&lt;/i&gt;&lt;/a&gt;  &amp;nbsp;  &amp;nbsp; &lt;a href="https://github.com/elb0/"&gt;&lt;i class="fa-brands fa-square-github"&gt;&lt;/i&gt;&lt;/a&gt;
+
+# These slides: [link.lizabolton.com/reprex](http://link.lizabolton.com/reprex)
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
