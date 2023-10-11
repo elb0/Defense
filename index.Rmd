@@ -130,9 +130,6 @@ The Crown is in breach of its obligations under .large.purple[te Tiriti o Waitan
 ]
 
 
-???
-A longitudinal perspective that considers socioeconomic influences across arcs of people’s lives may have different implications for interventions enhancing equity in the face of persistent disparities in mortality outcomes between ethnic groups. 
-
 Repeated measures and life-course information about .highlight[.purple[socioeconomic position (SEP)]] may identify crucial exposures and exposure patterns/periods, explain more of the inequalities between ethnic groups, and establish whether social and cultural capital can protect against exposure to socioeconomic risk factors.
 
 First point: Blakely et al., 2017, 2018; Disney et al., 2017; Heslop et al., 2001; Kinge et al., 2019; Marmot & Bell, 2016; Mishra et al., 2013; Padyab et al., 2013; Teng, Atkinson, Disney, Wilson, & Blakely, 2016, Ministry of Health, 2015 
@@ -205,6 +202,35 @@ class: inverse, middle
 ## <i class="fa-solid fa-arrow-trend-up"></i> Life-course hypotheses
 
 .purple.large.highlight[Which life-course hypotheses, out of **accumulation**, **sensitive period**, and **mobility**, best explain the relationship between SEP and mortality in Aotearoa New Zealand?]
+
+---
+## .lightpurple[<i class="fa-solid fa-arrow-trend-up"></i>] Life-course hypotheses
+
+.pull-left.midi[
+### Background
+Established approaches to comparing trajectories using goodness of fit tests .myref[(Mishra et al., 2008)].
+
+### Variables
+**Mortality**: 5-years post census 2006 
+**Demographic**: Age (30–49), sex, ethnicity   
+**SEP**: Household equivalised income, welfare receipt and occupational status (dichotomised)
+]
+
+.pull-right.midi[
+### Methods
+
+For each SEP indicator:
+- Logistic regression models for each life-course hypothesis, demographics only and saturated trajectories   
+- ROC curves calculated + associated AUC  
+- AUC confidence intervals bootstrapped
+
+#### Features
+- Sensitivity design:
+  - Adjacent age groups
+  - Sex
+- Multiple SEP measures compared: Welfare, household income and occupational status
+]
+
 
 ---
 ## .lightpurple[<i class="fa-solid fa-arrow-trend-up"></i>] Life-course hypotheses
@@ -298,39 +324,10 @@ class: inverse, middle
 ---
 ## .lightpurple[<i class="fa-solid fa-arrow-trend-up"></i>] Life-course hypotheses
 
-.pull-left.midi[
-### Background
-Established approaches to comparing trajectories using goodness of fit tests .myref[(Mishra et al., 2008)].
-
-### Variables
-**Mortality**: 5-years post census 2006 
-**Demographic**: Age (30–49), sex, ethnicity   
-**SEP**: Household equivalised income, welfare receipt and occupational status (dichotomised)
-]
-
-.pull-right.midi[
-### Methods
-
-For each SEP indicator:
-- Logistic regression models for each life-course hypothesis, demographics only and saturated trajectories   
-- ROC curves calculated + associated AUC  
-- AUC confidence intervals bootstrapped
-
-#### Features
-- Sensitivity design:
-  - Adjacent age groups
-  - Sex
-- Multiple SEP measures compared: Welfare, household income and occupational status
-]
-
-
----
-## .lightpurple[<i class="fa-solid fa-arrow-trend-up"></i>] Life-course hypotheses
-
 .left-code[
 ### Results
 
-Calculations of the **a**rea **u**nder the ROC **c**urve (AUC) indicate how well the model classifies, specificially: if you were to randomly select two individuals, one who died and one who didn't, how likely would the model be to correctly order them so the individual who did die has a higher predicted probability.
+Calculations of the area under the ROC curve (AUC) indicate how well the model classifies, specificially: if you were to randomly select two individuals, one who died and one who didn't, how likely would the model be to correctly order them so the individual who did die has a higher predicted probability.
 ]
 
 .right-plot[
@@ -351,12 +348,6 @@ However, most of the life-course hypothesis and SEP indicator combinations acros
 Where they do, measures of SEP at a .large.purple[single point directly before mortality follow-up] are sufficient.
 </div>
 
-
-???
-- Most experiences receiving welfare or living in a low-income household were associated with higher mortality, regardless of timing or pattern of exposure. 
-- However, life-course hypotheses with adulthood SEP did not generally improve classification of mortality outcomes beyond what could be achieved with demographic variables alone. 
-- In the one case where there was an improvement in classification, only SEP before the mortality follow-up window was needed to be approximately as effective at classification as having full knowledge of an individual’s SEP experiences at three points over 25 years. (welfare receipt, 55–64 at the census before mortality follow-up).
-- For individuals consistently in the labour force across adulthood, lower occupational status was not as strongly associated with mortality as welfare and household income.
 
 
 ---
@@ -414,9 +405,6 @@ knitr::include_graphics("img/perc-med.png")
 
 <div class="emphasis-box">.purple[**40–50%**] of the mortality inequalities between Māori and European New Zealanders in the 2000s were explained by SEP, .purple[**regardless of whether SEP was measured at a single point or repeated measures over time**].</div>
 
-???
-- Sex patterns consistent with a pattern observed by Blakely et al. (2018) with SEP indicators measured at the census immediately before mortality follow-up
-- Specifically, that for males, this bias may underestimate the extent of SEP mediation. 
 
 ---
 class: inverse, middle
@@ -475,8 +463,6 @@ knitr::include_graphics("img/relig-eth-long.png")
 ```
 ]
 
-???
-After pairwise comparison adjustments, not sig differences for Māori. Became religious not significant (after pairwise and adjustment for health).
 
 ---
 ## .lightpurple[<i class="fa-solid fa-diagram-project"></i>] Religious affiliation
@@ -493,10 +479,6 @@ After pairwise comparison adjustments, not sig differences for Māori. Became re
 <br></br>
 Either no detected difference or .purple[**significantly higher odds of mortality**] for the religiously affiliated.</div>
 
-???
-Pacific people, the most religiously affiliated of the four main ethnic groupings.
-
-Tracking affiliation longitudinally over 10 years for Māori, Asian and Pacific New Zealanders, there were no significant associations for religiosity, though the relatively small number of observations in each trajectory may have limited detection of any differences.
 
 
 ---
@@ -554,12 +536,7 @@ count: false
 - NZLC weights may not be necessary where many demographic and socioeconomic variables are also included in modelling. 
 ]  
   
-???
-Religion implications: 
-  - This is a pattern that has been seen generally with health outcomes for Asian New Zealanders (Woodward & Blakely, 2015)
-- and would be an interesting instance of this relationship with a social and cultural capital indicator. To my knowledge, the mechanism for this association is not well established for any large population, especially where religious affiliation is associated with higher odds of mortality instead of being protective e.g., due to a specific diet in a small subgroup (Shatenstein & Ghadirian, 1998). 
 
-Weights: Researchers using the NZLC should considered appropriateness for their aims and methods, especially in reporting simple regressions and counts. Failure to account for linkage bias appropriately may result in overestimates of mortality.
 
 ---
 ## Selected acknowledgements
@@ -612,8 +589,8 @@ name: index
 - [Net reclassification index](#nri-sup)
 
 #### Data
-- [Missing data](#missing-sup)
 - [Why was 2006 the latest census?](#old-data-sup)
+- [Missing data](#missing-sup)
 
 ---
 count: false
@@ -905,8 +882,6 @@ knitr::include_graphics("img/pepe-2015.png")
 ```
 ]
 
-???
-Area under the curve (AUC), which you may also hear referred to as the *c*-statistic can be too conservative. I chose it for our purposes partially due to it's high conservatism. Other approaches could and should certainly be considered in future directions, but my understanding if NRI is that its sensitivity is potentially too risky to be a cornerstone for making claims from.
 
 [Back](#index)
 
