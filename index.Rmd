@@ -59,7 +59,7 @@ xaringanExtra::use_tile_view()
 <br>
 ### Elizabeth (Liza) Lillian Bolton
 
-Supervised by Thomas Lumley and Barry Milne, with thanks to Alan Lee, Chris Wilde and Andrew Sporle
+Supervised by Thomas Lumley and Barry Milne, with thanks to Alan Lee, Chris Wild and Andrew Sporle
 
 ##### 2023-10-12
 
@@ -128,15 +128,6 @@ The Crown is in breach of its obligations under .large.purple[te Tiriti o Waitan
 ]
 
 ]
-
-
-Repeated measures and life-course information about .highlight[.purple[socioeconomic position (SEP)]] may identify crucial exposures and exposure patterns/periods, explain more of the inequalities between ethnic groups, and establish whether social and cultural capital can protect against exposure to socioeconomic risk factors.
-
-First point: Blakely et al., 2017, 2018; Disney et al., 2017; Heslop et al., 2001; Kinge et al., 2019; Marmot & Bell, 2016; Mishra et al., 2013; Padyab et al., 2013; Teng, Atkinson, Disney, Wilson, & Blakely, 2016, Ministry of Health, 2015 
-
-Second point: (Disney et al., 2017)
-Since the 1980s, between 40% and 50% of the difference between working-ages Māori and European people can be explained by differing social and economic conditions.  
-(Blakely et al., 2018)
 
 ---
 class: inverse, middle
@@ -402,9 +393,9 @@ knitr::include_graphics("img/perc-med.png")
 ### Conclusions
 
 - Point estimates for the percentage mediated were consistently higher with repeated measures, but not practically significantly.
-- .purple[**Possible sex-differential survivorship bias**]: While all estimates for males and females in the same linkage cohort overlap, for cohorts with only two links females had lower estimated mediation than males. For cohorts with more repeated measures (i.e., more censuses linked) this relationship reverses somewhat with generally more mediation for females.  
+- .large.purple[Possible sex-differential survivorship bias]: While all estimates for males and females in the same linkage cohort overlap, for cohorts with only two links females had lower estimated mediation than males. For cohorts with more repeated measures (i.e., more censuses linked) this relationship reverses somewhat with generally more mediation for females.  
 
-<div class="emphasis-box">.purple[**40–50%**] of the mortality inequalities between Māori and European New Zealanders in the 2000s were explained by SEP, .purple[**regardless of whether SEP was measured at a single point or repeated measures over time**].</div>
+<div class="emphasis-box">.large.purple[40–50%] of the mortality inequalities between Māori and European New Zealanders in the 2000s were explained by SEP, .large.purple[regardless of whether SEP was measured at a single point or repeated measures over time].</div>
 
 
 ---
@@ -533,7 +524,7 @@ count: false
 ### Implications
 - Addressing SEP fundamental to health equity and meeting Tiriti obligations.
 - Repeated census-based measures of SEP added surprisingly little to prediction and mediation of mortality outcomes.  
-- For Asian New Zealanders the association between religious affiliation and mortality may be converging towards Māori/European patterns. This is a known phenomenon with health. Pacific religious affiliation also decreasing and there could be challenges with this transition. 
+- For Asian New Zealanders the association between religious affiliation and mortality may be converging towards Māori/European patterns. This is a known phenomenon with health. Pacific religious affiliation rates are also decreasing. 
 - NZLC weights may not be necessary where many demographic and socioeconomic variables are also included in modelling. 
 ]  
   
