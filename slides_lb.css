@@ -5,19 +5,21 @@
 body {
   font-family: 'Source Sans Pro'; sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 20px;
   color: #333333;
 }
 h2 {
   font-family: 'Overlock', sans-serif;
   font-weight: 600;
   color: #612464;
-  margin: 0em 0 0em 0;
+  margin: 0.2em 0 0em 0;
 }
 h1, h3 {
   font-family: 'Overlock', sans-serif;
   font-weight: 600;
   color: #612464;
+  margin: 0.2em 0 0em 0;
+
 }
 a, a > code {
   font-family: 'Source Sans Pro', sans-serif;
@@ -52,6 +54,11 @@ a, a > code {
   color: #f3f3f3;
 }
 
+.hide-count .remark-slide-number {
+  display: none;
+}
+
+
 /* Four-column layout */
 .column4 {
   float: left;
@@ -69,7 +76,7 @@ a, a > code {
 /* Three-column layout */
 .column {
   float: left;
-  width: 30%;
+  width: 32%;
   padding: 10px;
 }
 
@@ -131,18 +138,26 @@ a, a > code {
   color: #612464;
 }
 
+.lightpurple{
+  color: #87528A;
+}
+
 ul {
   list-style-type: square;
 }
 li{
-  margin: 0px 0;
+    margin: 0em 0 0em 0;
 }
+.verylarge { font-size: 190% }
 .large { font-size: 130% }
 .midi { font-size: 90% }
 .midsmall { font-size: 80% }
 .small { font-size: 70% }
 .tiny { font-size: 60% }
 .verytiny { font-size: 40% }
+
+.myref { color: #612464; font-size: 60% }
+
 img, video, iframe {
   max-width: 100%;
 }
@@ -204,7 +219,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 }
 
 .left-code {
-  color: #777;
+  /*color: #777;*/
   width: 38%;
   height: 92%;
   float: left;
