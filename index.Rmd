@@ -205,35 +205,6 @@ class: inverse, middle
 
 ---
 ## .lightpurple[<i class="fa-solid fa-arrow-trend-up"></i>] Life-course hypotheses
-
-.pull-left.midi[
-### Background
-Established approaches to comparing trajectories using goodness of fit tests .myref[(Mishra et al., 2008)].
-
-### Variables
-**Mortality**: 5-years post census 2006 
-**Demographic**: Age (30–49), sex, ethnicity   
-**SEP**: Household equivalised income, welfare receipt and occupational status (dichotomised)
-]
-
-.pull-right.midi[
-### Methods
-
-For each SEP indicator:
-- Logistic regression models for each life-course hypothesis, demographics only and saturated trajectories   
-- ROC curves calculated + associated AUC  
-- AUC confidence intervals bootstrapped
-
-#### Features
-- Sensitivity design:
-  - Adjacent age groups
-  - Sex
-- Multiple SEP measures compared: Welfare, household income and occupational status
-]
-
-
----
-## .lightpurple[<i class="fa-solid fa-arrow-trend-up"></i>] Life-course hypotheses
 ### Socioeconomic position trajectories
 <style>
   .spacer {
@@ -319,6 +290,36 @@ For each SEP indicator:
     </tr>
 </table>
 
+]
+
+
+---
+## .lightpurple[<i class="fa-solid fa-arrow-trend-up"></i>] Life-course hypotheses
+
+.pull-left.midi[
+### Background
+- A longitudinal perspective that considers socioeconomic influences across arcs of people’s lives may have different implications for interventions.
+- Established approaches to comparing trajectories using goodness of fit tests .myref[(Mishra et al., 2008)].
+
+### Variables
+**Mortality**: 5-years post census 2006 
+**Demographic**: Age (30–49), sex, ethnicity   
+**SEP**: Household equivalised income, welfare receipt and occupational status (dichotomised)
+]
+
+.pull-right.midi[
+### Methods
+
+For each SEP indicator:
+- Logistic regression models for each life-course hypothesis, demographics only and saturated trajectories   
+- ROC curves calculated + associated AUC  
+- AUC confidence intervals bootstrapped
+
+#### Features
+- Sensitivity design:
+  - Adjacent age groups
+  - Sex
+- Multiple SEP measures compared: Welfare, household income and occupational status
 ]
 
 ---
