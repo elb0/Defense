@@ -48,7 +48,7 @@ Supervised by Thomas Lumley and Barry Milne, with thanks to Alan Lee, Chris Wild
 ---
 ## .lightpurple[&lt;i class="fa-solid fa-handshake"&gt;&lt;/i&gt;] Mihi | Greetings
 
-.pull-left[Tēnā koutou katoa. 
+.pull-left.midi[Tēnā koutou katoa. 
 
 Ko .purple[**Uropi**] me .purple[**Kanata**] te whakapaparanga mai.
 
@@ -64,7 +64,7 @@ Tēnā tātou katoa.
 ]
 
 
-.pull-right[
+.pull-right.midi[
 Greetings everyone.  
 
 My origins are in .purple[**Europe**] and .purple[**Canada**].  
@@ -80,9 +80,6 @@ My name is .purple[**Liza**].
 Greetings all.
 ] 
 
-???
-As an uninvited guest twice over in the countries I have called home, I acknowledge the Indigenous peoples whose traditional lands I have lived and learned on. I grew up on, and then returned to, Canada and the traditional lands of the Anishinaabeg, the Haudenosaunee, and the Mississaugas of the Credit. Moving to Aotearoa, I lived first in Waipā and then Tāmaki Mākaurau. I will continue to work to be a better tangata Tiriti, honouring my duties to the places and peoples that helped createp me.
-
 
 ---
 ## .lightpurple[&lt;i class="fa-solid fa-right-long"&gt;&lt;/i&gt;] Motivation
@@ -91,20 +88,23 @@ As an uninvited guest twice over in the countries I have called home, I acknowle
 .column[
 .lightpurple.verylarge.center[&lt;i class="fa-solid fa-hospital"&gt;&lt;/i&gt;]
 
-Socioeconomic inequalities in mortality are well established and governments consider this in policy.]
+Socioeconomic inequalities in mortality are well established and governments consider this in policy.
+
+.large.purple[Socioeconomic position (SEP)] is a measure of social and/or economic resources and the associated social status.
+]
 
 .column[
 .lightpurple.verylarge.center[&lt;i class="fa-solid fa-down-long"&gt;&lt;/i&gt;]
 
 .large.purple[Ethnic inequalities persist] even as all-cause mortality rates are decreasing  in Aotearoa New Zealand. 
 
-.large.purple[40—50%] of Māori / European mortality inequalities can be explained by differing social and economic conditions. 
+.large.purple[40–50%] of Māori / European mortality inequalities can be explained by differing social and economic conditions. 
 ]
 
 .middle.column[
 .lightpurple.verylarge.center[&lt;i class="fa-solid fa-scroll"&gt;&lt;/i&gt;]
 
-The Crown is in breach of its obligations under .purple[**te Tiriti o Waitangi**] with respect to health outcomes for Māori. Redressing disparities in SEP is fundamental to health equity obligations.
+The Crown is in breach of its obligations under .large.purple[te Tiriti o Waitangi] with respect to health outcomes for Māori. Redressing disparities in SEP is fundamental to health equity obligations.
 .myref[(Waitangi Tribunal, 2019)]
 ]
 
@@ -285,8 +285,8 @@ Established approaches to comparing trajectories using goodness of fit tests .my
 
 ### Variables
 **Mortality**: 5-years post census 2006 
-**Demographic**: age, sex, ethnicity   
-**SEP**: household equivalised income, welfare receipt and occupational status (dichotomised)
+**Demographic**: Age (30–49), sex, ethnicity   
+**SEP**: Household equivalised income, welfare receipt and occupational status (dichotomised)
 ]
 
 .pull-right.midi[
@@ -323,11 +323,11 @@ Calculations of the **a**rea **u**nder the ROC **c**urve (AUC) indicate how well
 ### Conclusions
 
 &lt;div class="emphasis-box"&gt;
-Lower SEP is consistently significantly associated with higher mortality. 
+.large.purple[Lower SEP] is consistently significantly associated with .large.purple[higher mortality]. 
 &lt;br&gt;&lt;br&gt;
-However, most of the life-course hypothesis and SEP indicator combinations across adulthood I tested do not improve classification of mortality outcomes. 
+However, most of the life-course hypothesis and SEP indicator combinations across adulthood I tested .large.purple[do not improve classification of mortality outcomes], based on AUC. 
 &lt;br&gt;&lt;br&gt;
-Where they do, measures of SEP at a single point directly before mortality follow-up are sufficient.
+Where they do, measures of SEP at a .large.purple[single point directly before mortality follow-up] are sufficient.
 &lt;/div&gt;
 
 
@@ -349,7 +349,7 @@ class: inverse, middle
 
 .pull-left.midi[
 ### Background
-- Mediation analyses quantify causal pathways
+- Mediation analyses quantify causal pathways.
 - 40—50% of the difference in mortality outcomes between Māori and Europeans across the 1980s, 1990s and 2000s explained by differences in SEP (cross-sectional). .myref[(Blakely, et al., 2018)]
 
 ### Variables
@@ -362,8 +362,8 @@ class: inverse, middle
 .pull-right.midi[
 ### Methods
 
-- Logistic regression with interactions between ethnicity and all other variables
-- Use the original data and a 'cross-world' version of the data where, counterfacutally, Māori have European covariate distributions to predict age adjusted mortality rates for Māori, Europeans and 'cross-world' Māori
+- Fit logistic regression with interactions between ethnicity and all other variables
+- Use the original data and a .large.purple['cross-world'] version of the data where, counterfacutally, Māori have European covariate distributions to predict age adjusted mortality rates for Māori, Europeans and 'cross-world' Māori
 
 #### Features
 - Compares single &amp; repeated measures of SEP
@@ -411,7 +411,7 @@ Religion is a known social determinant of mortality, though the nature of this r
 
 ### Variables
 **Mortality**: 3-years after 1996, 2006  
-**Religious affiliation**: As at 1996/2006, or trajectory between 1996 &amp; 2006 (missing values imputed) 
+**Religious affiliation**: As at 1996/2006, or trajectory between 1996 &amp; 2006 (missing values imputed)   
 **Demographic**: Sex, 5-year age group, ethnicity, born in NZ, rurality  
 **Economic**: Education, household equivalised income, labour force status  
 **Health**: Invalid's benefit receipt, disability status
@@ -903,9 +903,58 @@ count: false
 class: hide-count
 name: missing-sup
 
-## .lightpurple[&lt;i class="fa-solid fa-table"&gt;&lt;/i&gt;] Data: Missing data
+### .lightpurple[&lt;i class="fa-solid fa-table"&gt;&lt;/i&gt;] Data: Variable summary with a focus on missing data
 
-
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:10px;
+  overflow:hidden;padding:10px 3px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:10px;
+  font-weight:normal;overflow:hidden;padding:0px 3px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class="tg"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-0lax"&gt; &lt;br&gt; &lt;/th&gt;
+    &lt;th class="tg-cly1"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Outcome: Mortality&lt;/span&gt; &lt;/th&gt;
+    &lt;th class="tg-cly1"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Demographic variables&lt;/span&gt; &lt;/th&gt;
+    &lt;th class="tg-cly1"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;SEP variables&lt;/span&gt; &lt;/th&gt;
+    &lt;th class="tg-cly1"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Health&lt;/span&gt; &lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-cly1"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;General&lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="color:black"&gt;Linked to death record or not. No 'missing', missed links considered &lt;br&gt;'not linked' — NZCMS weights calculated to account for ths.&lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Age&lt;/span&gt;&lt;span style="color:black"&gt; and &lt;/span&gt;&lt;span style="font-weight:bold;color:black"&gt;sex&lt;/span&gt;&lt;span style="color:black"&gt; are never reported as missing, it is a key census linking variable. Missing or unidentified ethnicity not removed. &lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Ethnicity&lt;/span&gt;&lt;span style="color:black"&gt;: Asian, European, Māori, Pacific (indicator variables, unless otherwise stated)&lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Household equivalized income &lt;/span&gt;&lt;span style="color:black"&gt;was imputed where possible (9–16% of values at each census) and quintiles calculated. Modelled with a missing level where imputation could be done.&lt;/span&gt; &lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Education&lt;/span&gt;&lt;span style="color:black"&gt;: Missing modelled as a level unless otherwise stated (mediation)&lt;/span&gt;&lt;br&gt;  &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Welfare receipt: &lt;/span&gt;&lt;span style="color:black"&gt;Reported receiving welfare or not or missing (modelled as a level)&lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Life-course hypotheses&lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="color:black"&gt;5-year follow-up post 2006 census&lt;/span&gt;&lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Age&lt;/span&gt;&lt;span style="color:black"&gt;: Restricted to 30–49 at 1981 census and split into two cohorts.&lt;/span&gt;  &lt;span style="color:black"&gt;Single year age increments (0-9) in each cohort were modelled as a numeric variable.&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Sex&lt;/span&gt;&lt;span style="color:black"&gt;: Male and female (combined and sex separated analyses) &lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Ethnicity&lt;/span&gt;&lt;span style="color:black"&gt;: See General section&lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;span style="font-weight:bold;color:black"&gt;Welfare receipt: &lt;/span&gt;&lt;span style="color:black"&gt;‘Low’ receiving government welfare assistance, ‘high’ otherwise. Missings removed.&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Occupational status&lt;/span&gt;&lt;span style="color:black"&gt;: Restricted to non-missing (must be in employment). ‘Low’ lowest two socioeconomic ‘classes’, using NZSEI (1996 and 2006), and the Elley-Irving (1981), high otherwise. Missings removed.&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Household equivalised income:&lt;/span&gt;  &lt;span style="font-weight:normal;color:black"&gt;‘Low’ if they lived in households where the household equivalised income was in the bottom quintile, ‘high’ otherwise. Missings removed. &lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Mediation&lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="color:black"&gt;5 years follow-up after 2001 and 2006 censuses, depending on the cohort&lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Age&lt;/span&gt;&lt;span style="color:black"&gt;: 25–74 at earliest/only census (modelled with 5-year age groups)&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Sex:&lt;/span&gt; &lt;span style="color:black"&gt;Male and female (sex separated analyses)&lt;/span&gt; &lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Ethnicity&lt;/span&gt;&lt;span style="color:black"&gt;: Restricted version — European only and Māori (an individual could not be in both groups and a person who only identifies with an Asian ethnicity, for example, would not be included)&lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Education: &lt;/span&gt;&lt;span style="font-weight:normal;color:black"&gt;Missing level dropped due to small counts.&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Household equivalized income:&lt;/span&gt; See General section&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Welfare receipt&lt;/span&gt;&lt;span style="color:black"&gt;: As in General section&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Labour force status&lt;/span&gt;&lt;span style="color:black"&gt;: Yes/no indicator with missings removed &lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Occupational status (NZSEI): &lt;/span&gt;&lt;span style="color:black"&gt;Missing if not in labour force / older than 69, missings modelled as a level&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;NZDEP&lt;/span&gt;&lt;span style="color:black"&gt;: No missing values&lt;/span&gt;&lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-cly1"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Religious affiliation&lt;/span&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="color:black"&gt;3 years follow-up after 1996 and 2006 censuses, depending on the cohort&lt;/span&gt;&lt;br&gt; &lt;br&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt;&lt;span style="font-weight:bold;color:black"&gt;Age&lt;/span&gt;&lt;span style="color:black"&gt;: 25–74 at earliest/only census (modelled with 5-year age groups)&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Sex&lt;/span&gt;&lt;span style="color:black"&gt;: Male &amp;amp; female&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Ethnicity&lt;/span&gt;&lt;span style="color:black"&gt;: See General section&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Born in NZ: &lt;/span&gt;&lt;span style="font-weight:normal;color:black"&gt;Missing modelled as a level&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Rurality: &lt;/span&gt;&lt;span style="font-weight:normal;color:black"&gt;No missing values in census records&lt;/span&gt;&lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Religious affiliation: &lt;/span&gt;&lt;span style="color:black"&gt;Imputation for missing religious affiliation from the previous census + sensitivity analysis of this.&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Household equivalized income:&lt;/span&gt;&lt;span style="font-weight:normal;color:black"&gt; See General section.&lt;/span&gt;&lt;br&gt;  &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Education&lt;/span&gt;&lt;span style="color:black"&gt;: removed individuals with unidentified education levels due to small counts when considering ethnicity-specific effects. &lt;/span&gt;&lt;br&gt;  &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Labour force status: &lt;/span&gt;&lt;span style="color:black"&gt;Individuals missing values for  were removed from the analysis. &lt;/span&gt;&lt;br&gt; &lt;br&gt; &lt;/td&gt;
+    &lt;td class="tg-0lax"&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Invalid’s benefit&lt;/span&gt;&lt;span style="color:black"&gt;:&lt;br&gt; Reported or not &lt;br&gt;(missing not distinguished from not reported)&lt;/span&gt;&lt;br&gt; &lt;br&gt;&lt;span style="font-weight:bold;color:black"&gt;Disability status:&lt;/span&gt;&lt;span style="color:black"&gt; &lt;/span&gt; &lt;span style="font-weight:normal;color:black"&gt;Missing/unidentified&lt;br&gt; modelled as a level&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 [Back](#index)
     </textarea>
