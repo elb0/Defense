@@ -366,8 +366,8 @@ class: inverse, middle
 - 40—50% of the difference in mortality outcomes between Māori and Europeans across the 1980s, 1990s and 2000s explained by differences in SEP (cross-sectional). .myref[(Blakely, et al., 2018)]
 
 ### Variables
-**Mortality**: 5-years post census 1996 & 2006  
-**Demographic**: 5-year age groups, sex, ethinicity (European only individuals and Māori individuals)  
+**Mortality**: 5-years post census 2001 & 2006  
+**Demographic**: 5-year age groups (25–74), sex, ethnicity (European only individuals and Māori individuals)  
 **Socioeconomic**: Education, household equivalised income, welfare, labour force status, occupational status, deprivation
 
 ]
@@ -476,9 +476,9 @@ knitr::include_graphics("img/relig-eth-long.png")
 - **Pacific**: No signficiant associations
 
 <div class="emphasis-box">
-.purple[**No evidence of protective effects**] of religious affiliation.  
+.large.purple[No evidence of protective effects] of religious affiliation.  
 <br></br>
-Either no detected difference or .purple[**significantly higher odds of mortality**] for the religiously affiliated.</div>
+Either no detected difference or .large.purple[significantly higher odds of mortality] for the religiously affiliated.</div>
 
 
 
@@ -494,16 +494,16 @@ class: inverse, middle
 
 
 .pull-left[
-- The NZCMS weights for missed census-to-.purple[**mortality**] links
-- Developed, but not validated: NZLC weights for missed census-to-.purple[***census***] links
+- The NZCMS weights for missed census-to-.purple[mortality] links
+- Developed, but not validated: NZLC weights for missed census-to-.purple[*census*] links
 ]
 .pull-right[
 
-- Results from both weighting systems broadly .purple[**consistent**]
-- Behaviours consistent with what we would expect if the weights are .purple[**accounting for some bias**] introduced based on missed census-to-census links
+- Results from both weighting systems broadly .large.purple[consistent]
+- Behaviours consistent with what we would expect if the weights are .large.purple[accounting for some bias] introduced based on missed census-to-census links
 ]
 <br>
-<div class="emphasis-box">Weights proposed to account for missed census-to-census links in the NZLC do appear to .purple[**reduce bias**]. However, when applied to the analyses in this thesis there were no practical changes to the conclusions. This may be because these models adjust for many of the same variables used to calculate the weights.</div>
+<div class="emphasis-box">Weights proposed to account for missed census-to-census links in the NZLC do appear to .large.purple[reduce bias]. However, when applied to the analyses in this thesis there were no practical changes to the conclusions. This may be because these models adjust for many of the same variables used to calculate the weights.</div>
 
 
 ---
@@ -519,8 +519,8 @@ count: false
 ### Strengths
 - Comparison of cross-sectional and repeated measures
 - Exploration of sex and ethnicity
-- Limited recall error & low undercount
-- Population coverage
+- Limited recall error
+- Population coverage & low undercount
 
 ### Limitations
 - Adult SEP only (not childhood SEP)
@@ -533,7 +533,7 @@ count: false
 ### Implications
 - Addressing SEP fundamental to health equity and meeting Tiriti obligations.
 - Repeated census-based measures of SEP added surprisingly little to prediction and mediation of mortality outcomes.  
-- For Asian New Zealanders the association between religious affiliation and mortality may be converging towards Māori/European patterns. This is a known phenomenon with health. and levels of religious affiliation for Pacific New Zealanders also decreasing. 
+- For Asian New Zealanders the association between religious affiliation and mortality may be converging towards Māori/European patterns. This is a known phenomenon with health. Pacific religious affiliation also decreasing and there could be challenges with this transition. 
 - NZLC weights may not be necessary where many demographic and socioeconomic variables are also included in modelling. 
 ]  
   
@@ -599,17 +599,14 @@ class: hide-count
 name: trajectories-sup
 ## Life-course hypotheses: Trajectory groupings
 
-
-
-
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:20px;overflow:hidden;
   padding:10px 5px;word-break:normal;background-color:#ffffff;}
-.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:20px;font-weight:normal;
   overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-nrix{text-align:center;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle;font-size:20px;}
+.tg .tg-nrix{text-align:center;vertical-align:middle;font-size:20px;}
 </style>
 <table class="tg">
  <caption style="text-align:left; font-size:20px">Table S1 (Table 1 repeated): The classification of each SEP trajectory under different life-course hypotheses. &nbsp</caption>
@@ -691,6 +688,8 @@ name: trajectories-sup
 </tbody>
 </table>
 
+
+
 [Back](#index)
 
 ---
@@ -706,14 +705,14 @@ name: mort-sup
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;background-color:#ffffff;}
-.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top;background-color:#ffffff;}
-.tg .tg-7fle{background-color:#efefef;font-weight:bold;text-align:center;vertical-align:top}
-.tg .tg-lqy6{text-align:right;vertical-align:top;background-color:#ffffff;}
-.tg .tg-0lax{text-align:left;vertical-align:top;background-color:#ffffff;}
-.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top;background-color:#ffffff;}
-.tg .tg-my2k{background-color:#efefef;text-align:right;vertical-align:top}
-.tg .tg-stqm{background-color:#fcff2f;font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-0c32{background-color:#fcff2f;text-align:right;vertical-align:top}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top;background-color:#ffffff;;font-size:14px}
+.tg .tg-7fle{background-color:#efefef;font-weight:bold;text-align:center;vertical-align:top;font-size:14px}
+.tg .tg-lqy6{text-align:right;vertical-align:top;background-color:#ffffff;;font-size:14px}
+.tg .tg-0lax{text-align:left;vertical-align:top;background-color:#ffffff;font-size:14px}
+.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top;background-color:#ffffff;font-size:14px}
+.tg .tg-my2k{background-color:#efefef;text-align:right;vertical-align:top;font-size:14px}
+.tg .tg-stqm{background-color:#fcff2f;font-weight:bold;text-align:left;vertical-align:top;font-size:14px}
+.tg .tg-0c32{background-color:#fcff2f;text-align:right;vertical-align:top;font-size:14px}
 </style>
 <table class="tg">
 <caption style="text-align:left; font-size:20px">Table S2: Weighted counts of deaths for each SEP trajectory by indicator and age cohort. Percentages represent the proportion of people in the trajectory and cohort that were linked to a death record in the follow-up period (excerpt from Table 3.3. in my thesis). </caption>
@@ -877,14 +876,13 @@ name: nri-sup
 <br>
 [Back](#index)
 ]
+
 .right-plot[
 ```{r, echo=F, out.width="84%"}
 knitr::include_graphics("img/pepe-2015.png")
 ```
 ]
 
-
-[Back](#index)
 
 ---
 count:false
@@ -916,8 +914,8 @@ name: missing-sup
   overflow:hidden;padding:10px 3px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:10px;
   font-weight:normal;overflow:hidden;padding:0px 3px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-cly1{text-align:left;vertical-align:middle;font-size:10px;}
+.tg .tg-0lax{text-align:left;vertical-align:top;font-size:10px;}
 </style>
 <table class="tg">
 <thead>
@@ -948,14 +946,14 @@ name: missing-sup
     <td class="tg-0lax"> <br><span style="font-weight:bold;color:black">Mediation</span> </td>
     <td class="tg-0lax"> <br><span style="color:black">5 years follow-up after 2001 and 2006 censuses, depending on the cohort</span> </td>
     <td class="tg-0lax"> <br><span style="font-weight:bold;color:black">Age</span><span style="color:black">: 25–74 at earliest/only census (modelled with 5-year age groups)</span><br> <br><span style="font-weight:bold;color:black">Sex:</span> <span style="color:black">Male and female (sex separated analyses)</span> <br> <br><span style="font-weight:bold;color:black">Ethnicity</span><span style="color:black">: Restricted version — European only and Māori (an individual could not be in both groups and a person who only identifies with an Asian ethnicity, for example, would not be included)</span> </td>
-    <td class="tg-0lax"> <br><span style="font-weight:bold;color:black">Education: </span><span style="font-weight:normal;color:black">Missing level dropped due to small counts.</span><br> <br><span style="font-weight:bold;color:black">Household equivalized income:</span> See General section<br> <br><span style="font-weight:bold;color:black">Welfare receipt</span><span style="color:black">: As in General section</span><br><br><span style="font-weight:bold;color:black">Labour force status</span><span style="color:black">: Yes/no indicator with missings removed </span><br> <br><span style="font-weight:bold;color:black">Occupational status (NZSEI): </span><span style="color:black">Missing if not in labour force / older than 69, missings modelled as a level</span><br> <br><span style="font-weight:bold;color:black">NZDEP</span><span style="color:black">: No missing values</span></td>
+    <td class="tg-0lax"> <br><span style="font-weight:bold;color:black">Education: </span><span style="font-weight:normal;color:black">Missing level dropped due to small counts.</span><br> <br><span style="font-weight:bold;color:black">Household equivalized income:</span> See General section<br> <br><span style="font-weight:bold;color:black">Welfare receipt</span><span style="color:black">: See General section</span><br><br><span style="font-weight:bold;color:black">Labour force status</span><span style="color:black">: Yes/no indicator with missings removed </span><br> <br><span style="font-weight:bold;color:black">Occupational status (NZSEI): </span><span style="color:black">Missing if not in labour force / older than 69, missings modelled as a level</span><br> <br><span style="font-weight:bold;color:black">NZDEP</span><span style="color:black">: No missing values</span></td>
     <td class="tg-0lax"> <br> </td>
   </tr>
   <tr>
     <td class="tg-cly1"> <br><span style="font-weight:bold;color:black">Religious affiliation</span> </td>
     <td class="tg-0lax"> <br><span style="color:black">3 years follow-up after 1996 and 2006 censuses, depending on the cohort</span><br> <br> </td>
     <td class="tg-0lax"><span style="font-weight:bold;color:black">Age</span><span style="color:black">: 25–74 at earliest/only census (modelled with 5-year age groups)</span><br> <br><span style="font-weight:bold;color:black">Sex</span><span style="color:black">: Male &amp; female</span><br> <br><span style="font-weight:bold;color:black">Ethnicity</span><span style="color:black">: See General section</span><br> <br><span style="font-weight:bold;color:black">Born in NZ: </span><span style="font-weight:normal;color:black">Missing modelled as a level</span><br> <br><span style="font-weight:bold;color:black">Rurality: </span><span style="font-weight:normal;color:black">No missing values in census records</span></td>
-    <td class="tg-0lax"> <br><span style="font-weight:bold;color:black">Religious affiliation: </span><span style="color:black">Imputation for missing religious affiliation from the previous census + sensitivity analysis of this.</span><br> <br><span style="font-weight:bold;color:black">Household equivalized income:</span><span style="font-weight:normal;color:black"> See General section.</span><br>  <br><span style="font-weight:bold;color:black">Education</span><span style="color:black">: removed individuals with unidentified education levels due to small counts when considering ethnicity-specific effects. </span><br>  <br><span style="font-weight:bold;color:black">Labour force status: </span><span style="color:black">Individuals missing values for  were removed from the analysis. </span><br> <br> </td>
+    <td class="tg-0lax"> <br><span style="font-weight:bold;color:black">Religious affiliation: </span><span style="color:black">Imputation for missing religious affiliation from the previous census + sensitivity analysis of this.</span><br> <br><span style="font-weight:bold;color:black">Household equivalized income:</span><span style="font-weight:normal;color:black"> See General section.</span><br>  <br><span style="font-weight:bold;color:black">Education</span><span style="color:black">: Removed individuals with unidentified education levels due to small counts when considering ethnicity-specific effects. </span><br>  <br><span style="font-weight:bold;color:black">Labour force status: </span><span style="color:black">Individuals missing values for  were removed from the analysis. </span><br> <br> </td>
     <td class="tg-0lax"> <br><span style="font-weight:bold;color:black">Invalid’s benefit</span><span style="color:black">:<br> Reported or not <br>(missing not distinguished from not reported)</span><br> <br><span style="font-weight:bold;color:black">Disability status:</span><span style="color:black"> </span> <span style="font-weight:normal;color:black">Missing/unidentified<br> modelled as a level</span> </td>
   </tr>
 </tbody>
